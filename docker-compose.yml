@@ -13,7 +13,7 @@ services:
       - ./reports:/app/reports
       - ./evidence:/app/evidence
     ports:
-      - "127.0.0.1:3333:3333"
+      - "0.0.0.0:3333:3333"
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3333/api/health"]
       interval: 30s
